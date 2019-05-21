@@ -15,10 +15,10 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def self.search(search)
-    if params[:search]
+    if search.present?
       @student  = Student.where('search LIKE ?',"%#{params[:search]}%")
     else
-      @student = Student.all
+     
    end
   end
 end

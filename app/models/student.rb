@@ -28,3 +28,4 @@ def search(search)
     @student = Student.all
 end
 end
+end

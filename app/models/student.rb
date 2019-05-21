@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
   
   def search(search)
     if params[:search]
-      @student  = 
+      @student  = Student.where
       
     else
       @student = Student.all

@@ -15,6 +15,11 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def search(search)
-    
+    if params[:search]
+      @student  = 
+      
+    else
+      @student = Student.all
+   end
   end
 end

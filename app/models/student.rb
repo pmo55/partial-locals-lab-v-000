@@ -16,8 +16,7 @@ class Student < ActiveRecord::Base
   
   def search(search)
     if params[:search]
-      @student  = Student.where('search LIKE ?',)
-      
+      @student  = Student.where('search LIKE ?',"%#{params[:search]}%")
     else
       @student = Student.all
    end

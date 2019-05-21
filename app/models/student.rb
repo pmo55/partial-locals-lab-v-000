@@ -26,5 +26,5 @@ def search(search)
     @student = Student.where('name LIKE ?', "#{params[:search]}")
   else
     @student = Student.all
-
+end
 end

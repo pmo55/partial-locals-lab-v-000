@@ -16,9 +16,9 @@ class Student < ActiveRecord::Base
   
   def self.search(search)
     if search.present?
-      @student  = Student.where('search LIKE ?',"%#{params[:search]}%")
+      where('search LIKE ?',"%#{params[:search]}%")
     else
-     
+     search.
    end
   end
 end
